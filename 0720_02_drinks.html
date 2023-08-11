@@ -29,33 +29,45 @@
         <!-- row-1 -->
         <div class="row ">
             <div class="col">
-                <button type="button" class="myBtn btn btn-success w-50 mx-auto" id="item1Btn" name=" 招牌奶綠"
+                <button type="button" class="myBtn btn btn-success w-100 mx-auto" name=" 招牌奶綠"
                     bg="border border-success"  price="50" >招牌奶綠 </button>
             </div>
             <div class="col text-center ">
                 <div class="box border border-success w-100 mx-auto rounded-2"> 新台幣 50 元整</div>
+            </div>
+            <div class="col text-center">
+                <button type="button" class="myBtn btn btn-outline-dark w-50 mx-auto"  name=" 招牌奶綠"
+                bg="border border-success"  price="50" >訂購 </button>
             </div>
 
         </div>
         <!-- row-2 -->
         <div class="row mt-3">
             <div class="col">
-                <button type="button" class="myBtn btn btn-warning w-50" id="item2Btn" name=" 招牌奶茶"
+                <button type="button" class="myBtn btn btn-warning w-100" id="item2Btn" name=" 招牌奶茶"
                     bg="border border-warning"  price="60" >招牌奶茶</button>
             </div>
             <div class="col text-center ">
                 <div class="box border border-warning w-100 mx-auto rounded-2"> 新台幣 60 元整</div>
+            </div>
+            <div class="col text-center">
+                <button type="button" class="myBtn btn btn-outline-dark w-50" id="item2Btn" name=" 招牌奶茶"
+                    bg="border border-warning"  price="60" >訂購</button>
             </div>
 
         </div>
         <!-- row-3 -->
         <div class="row my-3">
             <div class="col">
-                <button type="button" class="myBtn btn btn-danger w-50" id="item3Btn" name=" 招牌紅茶"
+                <button type="button" class="myBtn btn  btn-danger w-100" id="item3Btn" name=" 招牌紅茶"
                     bg="border border-danger" price="30" >招牌紅茶</button>
             </div>
             <div class="col text-center ">
                 <div class="box border border-danger w-100 mx-auto rounded-2"> 新台幣 30 元整</div>
+            </div>
+            <div class="col text-center ">
+                <button type="button" class="myBtn btn btn-outline-dark w-50" id="item3Btn" name=" 招牌紅茶"
+                    bg="border border-danger" price="30" >訂購</button>
             </div>
             
         </div>
@@ -156,17 +168,22 @@
                                         <input type="number" name="" id="item1value" class="form-control mt-1 text-center" value="1">
                                     </div>
                                     <div class="col text-center">
-                                        <input type="text" name="" id="" class="form-control mt-1 text-center" value=" ${price}" readonly>
+                                        <input type="text" name="" 
+                                        class="form-control mt-1 text-center" value=" ${price}" readonly>
                                     </div>
                                     <div class="col text-center">
-                                        <input type="text" name="" id="" class="form-control mt-1" value="" placeholder="備註">
+                                        <input type="text" name="" id="" 
+                                        class="form-control mt-1" value="" placeholder="備註 : 甜度,冰塊,...">
                                     </div>
                                     <div class="col text-center">
                                         <button type="button" class="btn btn-outline-dark w-100 btnDel "> 刪除</button>
                                     </div>
                                 </div>`
+                
+                myContainer.append(content);
 
-                myContainer.append(content)
+                
+                
                 // console.log($('.btnDel'));
                 const btnDel = $('.btnDel');
                 // console.log('btnDel', btnDel);
@@ -174,7 +191,7 @@
                     // console.log('del ok');
                     // remove 整條row 
                     let delRow = $(this).parent().parent();
-                    delRow.remove();
+                    delRow.remove();s
 
                 });
 
